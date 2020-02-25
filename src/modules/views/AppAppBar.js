@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
+import { useHistory } from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
+import MenuIcon from '@material-ui/icons/Menu';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+import Typography from "../components/Typography";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const styles = theme => ({
   title: {
@@ -36,40 +39,52 @@ const styles = theme => ({
 });
 
 function AppAppBar(props) {
-  const { classes } = props;
+  const {classes} = props;
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  let history = useHistory();
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = (event) => {
+    setAnchorEl(null);
+    history.push(determineURL(event.target.textContent));
+  };
+
+  const determineURL = (stringValue) => {
+    switch (stringValue) {
+      case "Results":
+      case "About":
+        return `/${stringValue.toLowerCase()}`;
+      default:
+        return `/`;
+    }
+  };
+
 
   return (
     <div>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-          <div className={classes.left} />
-          <Link
-            variant="h6"
-            underline="none"
-            color="inherit"
-            className={classes.title}
-            href="/premium-themes/onepirate/"
+          <MenuIcon onClick={handleClick}
+                    aria-controls="nav-menu" aria-haspopup="true"/>
+          <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
           >
-            {'onepirate'}
-          </Link>
+            <MenuItem onClick={handleClose}>Home</MenuItem>
+            <MenuItem onClick={handleClose}>Results</MenuItem>
+            <MenuItem onClick={handleClose}>About</MenuItem>
+          </Menu>
+          <div className={classes.left} />
+          <Typography align="center" variant="h2" marked="center">
+            Testing as a Service
+          </Typography>
           <div className={classes.right}>
-            <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              className={classes.rightLink}
-              href="/premium-themes/onepirate/sign-in/"
-            >
-              {'Sign In'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
-            >
-              {'Sign Up'}
-            </Link>
           </div>
         </Toolbar>
       </AppBar>

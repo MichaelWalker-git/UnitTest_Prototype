@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 const styles = theme => ({
   root: {
     color: theme.palette.common.white,
@@ -49,6 +49,11 @@ const styles = theme => ({
   },
 });
 
+const moveToSection = (h2Id) => {
+  const headerSection = document.getElementById("HowItWorksHeader");
+  headerSection.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+};
+
 function ProductHeroLayout(props) {
   const { backgroundClassName, children, classes } = props;
 
@@ -56,7 +61,7 @@ function ProductHeroLayout(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
         <img
-          src="/static/themes/onepirate/productHeroWonder.png"
+          src="https://github.com/mui-org/material-ui/blob/master/docs/static/themes/onepirate/productHeroWonder.png?raw=true"
           alt="wonder"
           width="147"
           height="80"
@@ -64,13 +69,7 @@ function ProductHeroLayout(props) {
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
-        <img
-          className={classes.arrowDown}
-          src="/static/themes/onepirate/productHeroArrowDown.png"
-          height="16"
-          width="12"
-          alt="arrow down"
-        />
+      <KeyboardArrowDownIcon onClick={moveToSection}/>
       </Container>
     </section>
   );
