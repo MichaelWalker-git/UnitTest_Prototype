@@ -1,25 +1,24 @@
 import React from 'react';
 import AppAppBar from "../modules/views/AppAppBar";
 import ProductHero from "../modules/views/ProductHero";
-import ProductValues from "../modules/views/ProductValues";
 import ProductHowItWorks from "../modules/views/ProductHowItWorks";
-import ProductCategories from "../modules/views/ProductCategories";
-import ProductSmokingHero from "../modules/views/ProductSmokingHero";
-import ProductCTA from "../modules/views/ProductCTA";
 import AppFooter from "../modules/views/AppFooter";
 import withRoot from "../modules/withRoot";
+import {useHistory} from "react-router-dom";
 
 
 function Home() {
+    let history = useHistory();
+
+    function goToResults() {
+        history.push("/results");
+    }
+
     return (
         <React.Fragment>
             <AppAppBar />
-            <ProductHero />
-            <ProductValues />
-            <ProductCategories />
-            <ProductHowItWorks />
-            <ProductCTA />
-            <ProductSmokingHero />
+            <ProductHero  goToResults={goToResults}/>
+            <ProductHowItWorks  goToResults={goToResults} />
             <AppFooter />
         </React.Fragment>
     );
