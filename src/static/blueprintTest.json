@@ -1,0 +1,10 @@
+{
+  "ADA": [
+    {
+      "room": {
+        "hallway": "true",
+        "bathroom": "false"
+      }
+    }
+  ]
+}
