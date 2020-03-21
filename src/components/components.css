@@ -1,5 +1,10 @@
 .body {
     display: flex;
     flex-direction: column;
+}
 
+.upload-elements {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }

@@ -5,6 +5,8 @@ import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import TextField from '../components/TextField';
+import {FacebookSVG} from "../../static/icons8-facebook";
+import {TwitterSVG} from "../../static/icons8-twitter";
 
 function Copyright() {
   return (
@@ -89,10 +91,10 @@ export default function AppFooter() {
             >
               <Grid item className={classes.icons}>
                 <a href="https://material-ui.com/" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
+                  <FacebookSVG/>
                 </a>
                 <a href="https://twitter.com/MaterialUI" className={classes.icon}>
-                  <img src="/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
+                  <TwitterSVG/>
                 </a>
               </Grid>
               <Grid item>
