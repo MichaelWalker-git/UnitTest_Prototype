@@ -3,55 +3,56 @@ import PropTypes from 'prop-types';
 
 import withRoot from "../modules/withRoot";
 import {useHistory} from "react-router-dom";
-import {Button} from "@material-ui/core";
-import styles from "./components.css";
+import {Button, Typography} from "@material-ui/core";
+import "../Components.css";
 
-const styleUpload = {
-	body: {
-		display: "flex",
-		flexDirection: "column",
-	},
-
-	uploadElements: {
-		display: "flex",
-		justifyContent: "center",
-		flexDirection: "row",
-	},
-};
+const callToActionText = `If you don't have one, download one:   `;
 
 function Upload(props) {
 	let history = useHistory();
-	const [file, setFile] = useState(null);
 	const [isButtonDisabled, toggleButton] = useState(true);
 
 	function handleFileChange(selectorFiles){
 		if(selectorFiles.length > 0){
 			toggleButton(false);
-			setFile(selectorFiles);
+			const reader = new FileReader();
+			reader.onload = function (e) {
+				const stringifiedJson =  JSON.stringify(e.target.result);
+				window.localStorage.setItem("jsonBluePrint", stringifiedJson);
+			};
+			reader.readAsText(selectorFiles[0]);
 		}
 	}
 
 	function submitResults(){
 		if(!isButtonDisabled){
-			props.submitFile(file);
 			history.push("/results");
 		}
 	}
 
 	return (
 		<React.Fragment>
-			<div className={styleUpload.body}>
-				<span className={styleUpload.uploadElements}>Upload a blueprint</span>
-				<div className={styleUpload.uploadElements}>If you don't have one, download one
+			<div className={"uploadBody"}>
+				<Typography
+					variant="h3"
+					className={"uploadElements"}>Upload a blueprint</Typography>
+				<div className={"spaceBetweenText"}>
+					<Typography variant="body1" className="callToAction">{callToActionText}</Typography>
+					<div>{" "}</div>
 					<a target="_blank"
 						 rel="noopener noreferrer"
 						 href={"https://www.mediafire.com/file/6afpymbxs9g37zn/blueprintTest.json/file"}
-					> here</a></div>
-				<input type={"file"}
-							 className={styleUpload.uploadElements}
-							 onChange={ (e) => handleFileChange(e.target.files) }/>
+					>
+						<Typography variant="body1">{' here'}</Typography>
+					</a>
+				</div>
+				<div className={"uploadElements"}>
+					<input type={"file"}
+						   className={"uploadElements"}
+						   onChange={ (e) => handleFileChange(e.target.files) }/>
+				</div>
 				<Button
-					className={styleUpload.uploadElements}
+					className={"uploadElements"}
 					color="secondary"
 					size="large"
 					variant="contained"

@@ -12,32 +12,27 @@ import AppFooter from "./modules/views/AppFooter";
 import Upload from "./components/Upload";
 
 export default function App() {
-	const [file, setFile] = useState(null);
 
-	function submitFile(file){
-		console.log(file, "!?");
-		setFile(file);
-	}
 
     return (
         <Router>
             <div>
-							<AppAppBar />
+                <AppAppBar/>
                 <Switch>
-									<Route exact path="/">
-											<Home />
-									</Route>
-									<Route exact path="/upload">
-										<Upload submitFile={submitFile}/>
-									</Route>
-									<Route path="/results">
-										<Result results={file}/>
-									</Route>
-									<Route path="/about">
-											<About />
-									</Route>
+                    <Route exact path="/">
+                        <Home/>
+                    </Route>
+                    <Route exact path="/upload">
+                        <Upload />
+                    </Route>
+                    <Route path="/results">
+                        <Result />
+                    </Route>
+                    <Route path="/about">
+                        <About/>
+                    </Route>
                 </Switch>
-							<AppFooter />
+                <AppFooter/>
             </div>
         </Router>
     );

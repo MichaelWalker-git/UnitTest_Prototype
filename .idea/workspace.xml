@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="408075cd-3c53-47bb-881d-372ee0033884" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/static/icons8-facebook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/static/icons8-twitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/views/AppFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/views/AppFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/views/AppAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/views/AppAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/icons8-facebook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/icons8-facebook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/icons8-twitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/icons8-twitter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +64,13 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/static" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/static" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -100,6 +107,7 @@
       <workItem from="1583279115470" duration="96000" />
       <workItem from="1584762778081" duration="1740000" />
       <workItem from="1584764802693" duration="5626000" />
+      <workItem from="1584914389230" duration="8980000" />
     </task>
     <servers />
   </component>
@@ -139,21 +147,21 @@
     <state width="1396" height="169" key="GridCell.Tab.0.right/-1440.163.1440.878/0.22.3440.1418@0.22.3440.1418" timestamp="1582663156347" />
     <state width="896" height="145" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1584805254292" />
     <state width="1676" height="169" key="GridCell.Tab.0.right/0.22.1440.878/-3440.-474.3440.1418@-3440.-474.3440.1418" timestamp="1582596587587" />
-    <state x="316" y="465" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584802065325">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-2792" y="154" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584918119280">
+      <screen x="-3440" y="-474" width="3440" height="1418" />
     </state>
     <state x="316" y="465" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1584802065325" />
-    <state x="-2792" y="154" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.22.1440.878/-3440.-474.3440.1418@-3440.-474.3440.1418" timestamp="1582593392616" />
-    <state x="252" y="333" width="683" height="486" key="find.popup" timestamp="1584805170008">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-2792" y="154" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.22.1440.878/-3440.-474.3440.1418@-3440.-474.3440.1418" timestamp="1584918119280" />
+    <state x="-2924" y="-24" width="687" height="518" key="find.popup" timestamp="1584920737219">
+      <screen x="-3440" y="-474" width="3440" height="1418" />
     </state>
     <state x="252" y="333" width="683" height="486" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1584805170008" />
-    <state x="-2924" y="-24" width="687" height="518" key="find.popup/0.22.1440.878/-3440.-474.3440.1418@-3440.-474.3440.1418" timestamp="1582595127476" />
-    <state x="256" y="241" width="670" height="501" key="search.everywhere.popup" timestamp="1584805166553">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-2924" y="-24" width="687" height="518" key="find.popup/0.22.1440.878/-3440.-474.3440.1418@-3440.-474.3440.1418" timestamp="1584920737219" />
+    <state x="-2915" y="-149" width="670" height="676" key="search.everywhere.popup" timestamp="1584923565000">
+      <screen x="-3440" y="-474" width="3440" height="1418" />
     </state>
     <state x="256" y="241" width="670" height="501" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1584805166553" />
-    <state x="-2915" y="-149" width="670" height="676" key="search.everywhere.popup/0.22.1440.878/-3440.-474.3440.1418@-3440.-474.3440.1418" timestamp="1582596640833" />
+    <state x="-2915" y="-149" width="670" height="676" key="search.everywhere.popup/0.22.1440.878/-3440.-474.3440.1418@-3440.-474.3440.1418" timestamp="1584923565000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -81,7 +81,7 @@ function AppAppBar(props) {
             <MenuItem onClick={handleClose}>About</MenuItem>
           </Menu>
           <div className={classes.left} />
-          <Typography align="center" variant="h2" marked="center">
+          <Typography align="center" variant="h4" marked="center">
             Testing as a Service
           </Typography>
           <div className={classes.right}>
