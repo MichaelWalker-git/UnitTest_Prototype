@@ -32,17 +32,16 @@ export const Result = () => {
     const handleSelect = (event, nodeIds) => {
         setSelected(nodeIds);
     };
-    const uploadedFile = JSON.parse(window.localStorage.getItem("jsonBluePrint"))["ADA"];
+    const uploadedFile = (JSON.parse(JSON.parse(window.localStorage.getItem("jsonBluePrint"))));
 
-    console.log(uploadedFile);
+    console.log(uploadedFile["ADA"], "uploadedFile");
 
      return (
         <React.Fragment>
-            <div className="uploadBody">
+            <div className="resultsContainer">
                 <Typography
                     align="center"
                     variant={"h5"}
-
                 >
                     Results
                 </Typography>
@@ -59,16 +58,25 @@ export const Result = () => {
                         onNodeToggle={handleToggle}
                         onNodeSelect={handleSelect}
                     >
-                        {/*<TreeItem nodeId="1" label={uploadedFile[0]}>*/}
-                        {/*    <TreeItem nodeId="2" label={uploadedFile[0][0]}>*/}
-                        {/*        <TreeItem nodeId="3" label={uploadedFile[0][0]}/>*/}
-                        {/*    </TreeItem>*/}
-                        {/*</TreeItem>*/}
-                        {/*<TreeItem nodeId="4" label={uploadedFile[1]}>*/}
-                        {/*    <TreeItem nodeId="5" label={uploadedFile[1][0]}>*/}
-                        {/*        <TreeItem nodeId="6" label={uploadedFile[1][0]}/>*/}
-                        {/*    </TreeItem>*/}
-                        {/*</TreeItem>*/}
+                        <TreeItem nodeId="1" label={"Dining Area"}>
+                            <TreeItem nodeId="2" label={"Bar"}>
+                                <TreeItem nodeId="3" label={uploadedFile["ADA"]["Dining Area"][0]["Bar"]}/>
+                            </TreeItem>
+                        </TreeItem>
+                        <TreeItem nodeId="4" label={"Bathroom"}>
+                            <TreeItem nodeId="5" label={"Toilet"}>
+                                <TreeItem nodeId="6" label={uploadedFile["ADA"]["Bathroom"][0]["Toilet"]}/>
+                            </TreeItem>
+                            <TreeItem nodeId="7" label={"Sink Clearance"}>
+                                <TreeItem nodeId="8" label={uploadedFile["ADA"]["Bathroom"][1]["Sink"]}/>
+                            </TreeItem>
+                            <TreeItem nodeId="9" label={"Sink Height"}>
+                                <TreeItem nodeId="10" label={uploadedFile["ADA"]["Bathroom"][2]["Sink"]}/>
+                            </TreeItem>
+                            <TreeItem nodeId="11" label={"Mirror"}>
+                                <TreeItem nodeId="12" label={uploadedFile["ADA"]["Bathroom"][3]["Mirror height"]}/>
+                            </TreeItem>
+                        </TreeItem>
                     </TreeView>
                 </div>
                 {/*}*/}

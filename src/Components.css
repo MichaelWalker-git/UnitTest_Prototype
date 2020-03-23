@@ -6,6 +6,11 @@
     background-image: url("https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?cs=srgb&dl=person-holding-black-pen-1109541.jpg&fm=jpg");
 }
 
+.resultsContainer {
+    height: 80%;
+    background-image: url("https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?cs=srgb&dl=person-holding-black-pen-1109541.jpg&fm=jpg");
+}
+
 .uploadElements {
     display: flex;
     justify-content: center;

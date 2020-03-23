@@ -41,7 +41,7 @@ function Upload(props) {
 					<div>{" "}</div>
 					<a target="_blank"
 						 rel="noopener noreferrer"
-						 href={"https://www.mediafire.com/file/6afpymbxs9g37zn/blueprintTest.json/file"}
+						 href={"https://www.mediafire.com/file/9ifmi239akwxrb8/blueprintTest.json/file"}
 					>
 						<Typography variant="body1">{' here'}</Typography>
 					</a>
