@@ -2,7 +2,7 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
+    Route, Redirect,
 } from "react-router-dom";
 import {Result} from "./components/Result";
 import Home from "./components/Home";
@@ -31,6 +31,7 @@ export default function App() {
                     <Route path="/about">
                         <About/>
                     </Route>
+                    <Redirect to="/" />
                 </Switch>
                 <AppFooter/>
             </div>

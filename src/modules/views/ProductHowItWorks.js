@@ -61,7 +61,7 @@ function ProductHowItWorks(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
         <img
-          src="https://github.com/mui-org/material-ui/blob/master/docs/static/themes/onepirate/productCurvyLines.png?raw=true"
+          src="./../../static/productCurvyLines.png"
           className={classes.curvyLines}
           alt="curvy lines"
         />

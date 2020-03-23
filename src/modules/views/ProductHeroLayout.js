@@ -60,12 +60,6 @@ function ProductHeroLayout(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src="https://github.com/mui-org/material-ui/blob/master/docs/static/themes/onepirate/productHeroWonder.png?raw=true"
-          alt="wonder"
-          width="147"
-          height="80"
-        />
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
